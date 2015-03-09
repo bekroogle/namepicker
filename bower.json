@@ -1,0 +1,22 @@
+{
+  "name": "namepicker",
+  "version": "0.1.0",
+  "homepage": "https://github.com/bekroogle/namepicker",
+  "authors": [
+    "Benjamin J. Kruger <bekroogle@gmail.com>"
+  ],
+  "description": "True random name selector for class.",
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.3"
+  }
+}
