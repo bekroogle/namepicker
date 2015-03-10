@@ -6,36 +6,41 @@
     %title namepicker
     %link{"rel" => "stylesheet", "href" => "./css/app.css"}
   %body
-    %form
-      Who's volunteering?
-      #students
-        %input{"type" => "checkbox", "id" => "Ben"}
-        // %input{"type" => "radio", "name" => "student", "value" => "ben", "id" => "ben"}
-        %label{"for" => "Ben"} Ben
+    #leftdiv
+      &nbsp;
+    #formdiv
+      %form
+        Who's volunteering?
+        #students
+          %input{"type" => "checkbox", "id" => "Ben"}
+          // %input{"type" => "radio", "name" => "student", "value" => "ben", "id" => "ben"}
+          %label{"for" => "Ben"} Ben
+          %br
+          %input{"type" => "checkbox", "id" => "Elizabeth"}
+          %label{"for" => "Elizabeth"} Elizabeth
+          %br
+          %input{"type" => "checkbox", "id" => "Garret"}
+          %label{"for" => "Garret"} Garret
+          %br
+          %input{"type" => "checkbox", "id" => "Karina"}
+          %label{"for" => "Karina"} Karina 
+          %br
+          %input{"type" => "checkbox", "id" => "Tracy"}
+          %label{"for" => "Tracy"} Tracy
+          %br
+          %input{"type" => "checkbox", "id" => "William"}
+          %label{"for" => "William"} William
         %br
-        %input{"type" => "checkbox", "id" => "Elizabeth"}
-        %label{"for" => "Elizabeth"} Elizabeth
-        %br
-        %input{"type" => "checkbox", "id" => "Garret"}
-        %label{"for" => "Garret"} Garret
-        %br
-        %input{"type" => "checkbox", "id" => "Karina"}
-        %label{"for" => "Karina"} Karina 
-        %br
-        %input{"type" => "checkbox", "id" => "Tracy"}
-        %label{"for" => "Tracy"} Tracy
-        %br
-        %input{"type" => "checkbox", "id" => "William"}
-        %label{"for" => "William"} William
-      %br
-      %input{"type" => "submit", "value" => "Choose!", "id" => "submit"}
-      %span.cent
-        or
-      %input{"type" => "button", "value" => "William vs Garret!", "id" => "willvgarret"}
-      %p
-        &nbsp;
-    %p#result
-      And the winner is...
+        %input{"type" => "submit", "value" => "Choose!", "id" => "submit"}
+        %span.cent
+          or
+        %input{"type" => "button", "value" => "William vs Garret!", "id" => "willvgarret"}
+        %p
+          &nbsp;
+    #rightdiv
+      &nbsp;
+      
+    %img{"src" => "./images/infinite.gif", "id" => "spinner"}  
     %script(src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js")
     %script(src="https://cdn.rawgit.com/tunnckoCore/randomorg-js/master/dist/randomorg-js.js")
     %script(src="./js/app.js")

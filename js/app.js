@@ -1,8 +1,12 @@
 var debugData;
 $('document').ready( function() {
-  choices = [];
+  $('#spinner').css('left', $('form').css('width') / 2 + 64);
+  $('#spinner').css('top', $('form').css('height') / 2 + 39);
+
+  var choices = [];
   
   $('form').submit( function(event) {
+    $('#spinner').css('visibility', 'visible');
     event.preventDefault();
     choices = [];
 
@@ -11,32 +15,36 @@ $('document').ready( function() {
         choices.push(this.id);
       }
     }); // each input
-    var randomJs = new RandomJs();
-    var result = randomJs
-      .apikey('4ab06f95-751f-45ef-a136-29d093323fa3')
-      .method('generateIntegers')
-      .params({n:1,min:1,max:choices.length})
-      .post(function(xhr, stream, body) {
-        
-        console.log(choices[body.result.random.data[0]-1]);
-        $('#result').html('And the winner is...' + choices[body.result.random.data[0]-1]);
-      });
-    console.log(result);
+
+    if (choices.length > 1) {
+      getRandomName(choices);
+    }
   }); // form.submit
 
-  $('#willvgarret').click( function() {
-    choices = ["William", "Garret"];
+  var getRandomName = function(choices) {
     var randomJs = new RandomJs();
     var result = randomJs
       .apikey('4ab06f95-751f-45ef-a136-29d093323fa3')
       .method('generateIntegers')
       .params({n:1,min:1,max:choices.length})
       .post(function(xhr, stream, body) {
-        
         console.log(choices[body.result.random.data[0]-1]);
-        $('#result').html('And the winner is...' + choices[body.result.random.data[0]-1]);
+        alert('And the winner is...\n'+ choices[body.result.random.data[0]-1]);
+        $('#spinner').css('visibility', 'hidden')
+       $('form input').each( function() {      
+         if (this.checked) {
+           $(this).click();
+          }
+        });
       });
-    console.log(result);
+  };
+    
+
+  $('#willvgarret').click( function() {
+    $('#spinner').css('visibility', 'visible')
+    choices = ["William", "Garret"];
+    getRandomName(choices);
   });
+
 }); // document.ready
 //$( elem ).prop( "checked" )

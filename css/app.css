@@ -1,12 +1,21 @@
 /* Main stylesheet */
-
+body {
+    background-color: rgba(23, 80, 155, 0.48);
+}
 form {
   max-width: 600px;
   border: 1px solid black;
   border-radius: 6px;
   padding: 1em;
+  background-color: white;
 }
 
+#spinner {
+  position: absolute;
+  top: 50px;
+  left: 236px;
+  visibility: hidden;
+}
 #students {
   margin: 1em;
   border: 1px solid black;
