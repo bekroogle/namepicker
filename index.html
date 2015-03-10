@@ -4,29 +4,40 @@
     <meta charset='utf-8'>
     <meta content='width=device-width, initial-scale=1.0' name='viewport'>
     <title>namepicker</title>
+    <link href='./css/app.css' rel='stylesheet'>
   </head>
   <body>
     <form>
-      <input id='Ben' type='checkbox'>
-      <!-- / %input{"type" => "radio", "name" => "student", "value" => "ben", "id" => "ben"} -->
-      <label for='Ben'>Ben</label>
-      <br>
-      <input id='Elizabeth' type='checkbox'>
-      <label for='Elizabeth'>Elizabeth</label>
-      <br>
-      <input id='Garret' type='checkbox'>
-      <label for='Garret'>Garret</label>
-      <br>
-      <input id='Karina' type='checkbox'>
-      <label for='Karina'>Karina</label>
-      <br>
-      <input id='Tracy' type='checkbox'>
-      <label for='Tracy'>Tracy</label>
-      <br>
-      <input id='William' type='checkbox'>
-      <label for='William'>William</label>
+      Who's volunteering?
+      <div id='students'>
+        <input id='Ben' type='checkbox'>
+        <!-- / %input{"type" => "radio", "name" => "student", "value" => "ben", "id" => "ben"} -->
+        <label for='Ben'>Ben</label>
+        <br>
+        <input id='Elizabeth' type='checkbox'>
+        <label for='Elizabeth'>Elizabeth</label>
+        <br>
+        <input id='Garret' type='checkbox'>
+        <label for='Garret'>Garret</label>
+        <br>
+        <input id='Karina' type='checkbox'>
+        <label for='Karina'>Karina</label>
+        <br>
+        <input id='Tracy' type='checkbox'>
+        <label for='Tracy'>Tracy</label>
+        <br>
+        <input id='William' type='checkbox'>
+        <label for='William'>William</label>
+      </div>
       <br>
       <input id='submit' type='submit' value='Choose!'>
+      <span class='cent'>
+        or
+      </span>
+      <input id='willvgarret' type='button' value='William vs Garret!'>
+      <p>
+        &nbsp;
+      </p>
     </form>
     <p id='result'>
       And the winner is...

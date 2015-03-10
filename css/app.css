@@ -1,0 +1,30 @@
+/* Main stylesheet */
+
+form {
+  max-width: 600px;
+  border: 1px solid black;
+  border-radius: 6px;
+  padding: 1em;
+}
+
+#students {
+  margin: 1em;
+  border: 1px solid black;
+  padding: .5em;
+}
+
+#submit {
+  margin-left: 2em;
+  float: left;
+}
+
+#willvgarret {
+  margin-bottom: 2em;
+  float: left;
+}
+
+.cent {
+  float: left;
+  width: 60%;
+  text-align: center;
+}
